@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
   return (
@@ -10,4 +10,11 @@ const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
     </div>
   );
 };
+
+Options.propTypes = {
+  updateFeedback: PropTypes.func.isRequired,
+  resetFeedback: PropTypes.func.isRequired,
+  totalFeedback: PropTypes.number.isRequired,
+};
+
 export default Options;

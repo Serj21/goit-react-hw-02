@@ -1,5 +1,4 @@
-import React from "react";
-
+import PropTypes from "prop-types";
 const Feedback = ({ feedback, totalFeedback, positivePercentage }) => {
   return (
     <div>
@@ -19,4 +18,15 @@ const Feedback = ({ feedback, totalFeedback, positivePercentage }) => {
     </div>
   );
 };
+
+Feedback.propTypes = {
+  feedback: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }).isRequired,
+  totalFeedback: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
+
 export default Feedback;
