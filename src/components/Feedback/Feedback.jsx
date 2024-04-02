@@ -15,6 +15,7 @@ const Feedback = ({ feedback, totalFeedback, positivePercentage }) => {
           </p>
         </div>
       )}
+      {totalFeedback === 0 && <p>No feedback yet.</p>}
     </div>
   );
 };
